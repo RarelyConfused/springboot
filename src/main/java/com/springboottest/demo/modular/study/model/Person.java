@@ -12,6 +12,7 @@ import java.util.Map;
 
 @Component
 //@PropertySource(value = "classpath:application.properties")   
+//哈哈哈
 @ConfigurationProperties(prefix = "person")
 @Data
 public class Person {
