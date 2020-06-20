@@ -1,0 +1,49 @@
+person:
+  name: 张三
+  dog: ${person.dogName:旺财}
+  map:
+    k1: 美貌
+    k2: 才华
+  list: 男,未婚
+
+server:
+  port: 8082
+
+
+
+spring:
+  profiles:
+    active:
+  messages:
+    basename: i18n.login
+  thymeleaf:
+    cache: false
+#启动模式
+debug: false
+logging:
+  level:
+    com.springboottest.demo: trace
+
+
+
+
+---
+server:
+  port: 8082
+spring:
+  profiles: dev
+  datasource:
+    username: root
+    password: tutu961120
+    url: jdbc:mysql://127.0.0.1:3306/hutu
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+
+---
+server:
+  port: 8083
+spring:
+  profiles: produce
+
+

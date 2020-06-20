@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--th:replace="/common/common.html::common_hear(~{::title})"-->
+<head >
+    <meta charset="UTF-8">
+    <title>我滴妈也</title>
+    <script type="text/javascript" th:src="@{/js/test.js}" ></script>
+    <link th:href="@{/css/test.css}" rel="stylesheet" >
+
+</head>
+<body>
+<div th:replace="/project/skip"></div>
+<br>
+<span th:id="span">啦啦啦</span>
+<ul th:each="p,index:${result}">
+    <li th:text="${index.index}"></li>
+    <li th:text="${p.getName()}"></li>
+    <li th:text="${p.getSalary()}"></li>
+    <li th:text="${p.getType()}"></li>
+</ul>
+</body>
+</html>
